@@ -1,11 +1,14 @@
 package com.example.daggershowlibrary
 
+import javax.inject.Inject
+
+
 class Activity {
 
-    lateinit var keyboard: Keyboard
+    @Inject
+    lateinit var computer: Computer
 
     init {
-        Component().inject(this)
+        DaggerNewComponent.create().inject(this)
     }
-
 }

@@ -2,7 +2,7 @@ package com.example.example2.data.repository
 
 import com.example.example2.data.datasource.ExampleLocalDataSource
 import com.example.example2.data.datasource.ExampleRemoteDataSource
-import com.example.dependencyinjectionstart.example2.data.mapper.ExampleMapper
+import com.example.example2.data.mapper.ExampleMapper
 import com.example.example2.domain.ExampleRepository
 import javax.inject.Inject
 

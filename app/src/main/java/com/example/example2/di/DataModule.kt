@@ -15,4 +15,6 @@ interface DataModule {
 
     @Binds
     fun bindRemoteDatabase(remoteDb: ExampleRemoteDataSourceImpl): ExampleRemoteDataSource
+
+
 }

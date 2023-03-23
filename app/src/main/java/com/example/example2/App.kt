@@ -8,6 +8,6 @@ import java.util.*
 class App: Application() {
 
     val component by lazy {
-        DaggerApplicationComponent.factory().create(this, SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(System.currentTimeMillis()))
+        DaggerApplicationComponent.factory().create(this, System.currentTimeMillis())
     }
 }

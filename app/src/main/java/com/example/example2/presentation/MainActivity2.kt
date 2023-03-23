@@ -1,20 +1,15 @@
 package com.example.example2.presentation
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.daggershowlibrary.R
-import com.example.daggershowlibrary.databinding.ActivityMainBinding
 import com.example.example2.App
 import java.util.*
 import javax.inject.Inject
 
-class MainActivity : AppCompatActivity() {
+class MainActivity2 : AppCompatActivity() {
 
-    private val binding by lazy {
-        ActivityMainBinding.inflate(layoutInflater)
-    }
     @Inject
     lateinit var viewModelFactory: ViewModelFactory
 
@@ -29,20 +24,14 @@ class MainActivity : AppCompatActivity() {
         (application as App)
             .component
             .activityComponentFactory()
-            .create("My Id")
+            .create("My Id2")
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         component.inject(this)
         super.onCreate(savedInstanceState)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_main)
         viewModel.method()
         viewModel2.method()
-
-        binding.tvActivity.setOnClickListener {
-            Intent(this, MainActivity2::class.java).apply {
-                startActivity(this)
-            }
-        }
     }
 }
